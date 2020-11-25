@@ -1,5 +1,5 @@
-# 30_days_challange
-a 30 days challenge 
+# Day 1 here we go!
+class, abstract class, interface 
 
 DISCRIPTION TO DAY 1
 
