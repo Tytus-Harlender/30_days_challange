@@ -1,6 +1,8 @@
 # Day 1 here we go!
 class, abstract class, interface 
 
+Time spent overall: 3,5h
+
 DISCRIPTION TO DAY 1
 
 3 following programming concepts and the comparison between them will be discussed – a class, abstract class and interface. The folder consists of two files ‘Program.cs’ and ’Day1.cs’. ‘Program.cs’ is where method for executing the classes instances and printing it’s properties is placed. ’Day1.cs’ is where all the examples of classes, abstract classes and instances are placed and these will be further explained. The names of each was picked up to fit the abstraction level lurking behind. ‘PolonezTempleate’ indicate is ready-to-use (to create objects) template (class). ‘CarPrototype’ shows that is not yet ready prototype that needs some of its features to be defined (abstract class). ‘IConceptCar’ shows that its just a concept and needs all its features to be defined (interface) [note that interface name usually starts with ‘I’ – it is a ‘rule of thumb’ in the programming art]
