@@ -1,4 +1,4 @@
-#Day2
+# Day 2
 
 collections – terms of usage – interfaces implemented by collections - List, Queue, stack,Array
 missing: ienumerable or iquerably, directory
