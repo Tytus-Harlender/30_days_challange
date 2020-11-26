@@ -1,4 +1,5 @@
 #Day2
+
 collections – terms of usage – interfaces implemented by collections - List, Queue, stack,Array
 missing: ienumerable or iquerably, directory
 
@@ -36,6 +37,7 @@ The Hashtable and SortedList classes, the Dictionary<TKey,TValue> and SortedList
 
 
 Sources:
+
 Collections in general - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/collections
 Interafaces implementation paths and when to use which namespace: - https://docs.microsoft.com/en-us/dotnet/standard/collections/commonly-used-collection-types
 
