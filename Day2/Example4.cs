@@ -22,8 +22,19 @@ namespace Day2
             theRaceResults.Add(3, "Rafael");
             theRaceResults.Add(4, "Michael");
             theRaceResults.Add(5, "Gabriel");
-            
-            
+
+
+            theRaceResults[1] = "disqualified";
+
+            theRaceResults.Remove(4);
+            theRaceResults.Remove(5);
+
+            theRaceResults[2] = theRaceResults[3];
+
+
+
+
+
         }
         
     }
