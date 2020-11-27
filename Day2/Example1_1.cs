@@ -28,6 +28,16 @@ namespace Day2
 
         }
 
+        public static void RemoveFromListOfCars(List<string> cars)
+        {
+            cars.Remove("Audi");
+            cars.Remove("Ford");
+        }
+
+        
+
+
+
         public static void DisplayListOfCars(List<string> cars) 
         {
             foreach (string name in cars)
@@ -43,6 +53,9 @@ namespace Day2
 
             return carsList;
         }
+
+
+
 
     }
 }
