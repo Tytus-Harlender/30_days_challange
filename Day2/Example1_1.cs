@@ -34,8 +34,19 @@ namespace Day2
             cars.Remove("Ford");
         }
 
+        public static void InsertToList(List<string> cars)
+        {
+            cars.InsertRange(2, new string[] {"Chevrolet", "Peugeot"});
         
+        }
 
+        public static void DisplayNumberOfCarsInList(List<string> cars)
+        {
+            
+            Console.WriteLine(cars.Count);
+            
+
+        }
 
 
         public static void DisplayListOfCars(List<string> cars) 
