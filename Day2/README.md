@@ -1,4 +1,5 @@
 #Day2
+
 collections – terms of usage – interfaces implemented by collections - List, Array - Queue, Stack -  Dictionary - ienumerable vs iquerably
 
 Collection – it is a group of objects. Collections are used to manage the objects in the program and to perform various operations on them like to store, update, delete, retrieve, search, sort etc. They are created using already .NET namespaces. The most commonly used namespaces are:
