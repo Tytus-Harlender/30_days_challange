@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Text;
 
 namespace Day2
 {
@@ -37,8 +36,8 @@ namespace Day2
         public static void PrintValues(IEnumerable myCollection)
         {
             foreach (Object obj in myCollection)
-                Console.Write("    {0}", obj);
-            Console.WriteLine();
+                Console.WriteLine("{0}", obj);
+                
         }
     }
 }
