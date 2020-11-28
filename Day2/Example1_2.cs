@@ -10,25 +10,29 @@ namespace Day2
 
 
 
-        public static void CreateListOfCarObjects()
+        public static void CreateMyArray()
         {
-            List<object> carList = new List<object>();
+            string[] cars = new string[5];
+            string[] cars2 = new string[] { "Polonez", "Audi", "VolksWagen", "Audi", "VolksWagen"};
 
-            new Car() { Brand = "Polonez", ProductionDate = 1956, Color = "yellow"};
-            new Car() { Brand = "Audi", ProductionDate = 1966, Color = "green" };
-            new Car() { Brand = "VolksWagen", ProductionDate = 2000, Color = "red" };
-            new Car() { Brand = "Ford", ProductionDate = 1978, Color = "blue" };
+            Console.WriteLine(cars.Length);
+            Console.WriteLine(cars2.Length);
 
-            
+
+            Console.WriteLine(Array.IndexOf(cars2, "VolksWagen"));
+            Console.WriteLine(Array.IndexOf(cars2, "banana"));
+
+            Display(cars2);
+            Display(cars);
         }
 
-        public class Car
+        static void Display(IEnumerable<string> names)
         {
-            public string Brand { get; set; }
-            public int ProductionDate { get; set; }
-            public string Color { get; set; }
-
-
+            foreach (string name in names)
+            {
+                Console.WriteLine("IENUMERABLE: " + name);
+            }
         }
+
     }
 }
