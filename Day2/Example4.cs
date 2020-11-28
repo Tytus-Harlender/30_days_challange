@@ -32,7 +32,11 @@ namespace Day2
             theRaceResults[2] = theRaceResults[3];
 
 
-
+            string nameOfParticipant;
+            if (theRaceResults.TryGetValue(1, out nameOfParticipant))
+            {
+                Console.WriteLine(nameOfParticipant);
+            }
 
 
         }
