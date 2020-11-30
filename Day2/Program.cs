@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace Day2
 {
@@ -6,7 +6,9 @@ namespace Day2
     {
         static void Main()
         {
-            Example1_1.ShowExampleOne();
+            Console.WriteLine("Hi!");
+            Example2_1.CreateQueue();
+            Example2_1.CreateStack();
         }
     }
 }
