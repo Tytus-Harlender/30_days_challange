@@ -7,6 +7,7 @@ namespace Day4
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World11!");
+            TrialClass.TrialClassWriter();
 
         }
     }
