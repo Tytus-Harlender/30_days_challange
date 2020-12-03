@@ -12,8 +12,8 @@ namespace Day4
 
             a = 10;
 
-            Console.WriteLine("a");
-            Console.WriteLine("o");
+            Console.WriteLine(a);
+            Console.WriteLine(o);
             
         }
 
