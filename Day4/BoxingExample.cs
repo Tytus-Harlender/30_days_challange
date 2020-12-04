@@ -14,7 +14,13 @@ namespace Day4
 
             Console.WriteLine(a);
             Console.WriteLine(o);
-            
+
+            double e = 2.718281828459045;
+            object o1 = e;
+            object o2 = e;
+            Console.WriteLine(o1 == o2);
+
+
         }
 
       
