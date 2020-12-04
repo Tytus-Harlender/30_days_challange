@@ -21,6 +21,10 @@ https://cezarywalenciuk.pl/blog/programing/kurs-obiektowosc-w-c-systemobject-box
 
 We may see how a class for object instances with fields, properties and methods is defined in ‘MyClass.cs’. On the other hand, in ‘ObjectForMyClass.cs’ we may see how an instance of ‘MyClass’ is created and how it’s methods and fields are used in the next code lines, printing the members in the consoleline.
 
+An object is an instance of a class. A class is the definition of an object. It does not actually become an object until it is instantiated. Since an abstract class can't be instantiated, no object of that type can created. A sub class would need to be defined in order for an object to created.
+
+Source:
+https://stackoverflow.com/questions/8550130/what-is-the-difference-between-objects-and-classes-in-c
 
 3.	Value type and reference type – two basic kind of types in C#
 
