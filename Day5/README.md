@@ -18,5 +18,21 @@ https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-betw
 
 
 2.	Sealed keyword
+
+Sealed keyword is used to prevent other classes from inheriting from it. It may be also applied to methods and properties. Then the restriction is limited to the selected members not the hole class. 
+
+We may see an example of sealed keyword in “StopInheritance” class. First class is an abstract class with two methods. StopInheritance.cs derives from FirstClass and overrides these two methods. There we can see that word sealed is used. The consequence may be seen in the third class called FinalClass which can override only F2() method as this is not restricted from it. Attempt to override F() would proceed with an error.
+
+When to use it?
+
+-	For security purposes in order to make the classes responsible for security features, to prevent them from being modified
+-	To increase the performance rate of processes as ‘sealed’ tells that there is no need for searching for methods further down and that speeds things up. 
+
+
+Source:
+https://stackoverflow.com/questions/7777611/when-and-why-would-you-seal-a-class
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed
+
+
 3.	Overloading vs overriding
 
