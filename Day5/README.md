@@ -36,3 +36,18 @@ https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/seale
 
 3.	Overloading vs overriding
 
+Overloading is a multiple declaration of the same method within one class. Each declaration has the same method name but different input parameters.
+
+Overriding is describing a new functionality of a method previously defined in a base class after the inheritance of these class.
+
+Both concepts are presented within ‘OverloadingExample’ and ‘OverridingExample’ classes. In the first one we may see that PrintSomething method is declared twice but each declaration takes different parameters. In  ‘OverridingExample’ we see a base abstract class with abstract method that is later overridden.
+
+
+
+Source:
+https://stackoverflow.com/questions/673721/overloading-and-overriding
+https://www.w3schools.com/cs/cs_method_overloading.asp
+
+	
+
+
