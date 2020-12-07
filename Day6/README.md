@@ -22,6 +22,24 @@ Source:
 https://www.dotnetperls.com/partial
 https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods
 
+
+
+
 3.	Single responsibility class
 
+ One of the 5 design principles which stand in SOLID acronym. It says, that  every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate. All of that module, class or function's services should be narrowly aligned with that responsibility. There should always be only only one functional responsibility of a class which needs to be changed.
 
+Source:
+https://medium.com/@severinperez/writing-flexible-code-with-the-single-responsibility-principle-b71c4f3f883f
+https://en.wikipedia.org/wiki/Single-responsibility_principle#cite_note-cleancode-1
+
+4.	SOLID
+SOLID is an acronym for a set of five software development principles, which if followed, are intended to help developers create flexible and clean code. The five principles are:
+The Single Responsibility Principle — Classes should have a single responsibility and thus only a single reason to change.
+The Open/Closed Principle — Classes and other entities should be open for extension but closed for modification.
+The Liskov Substitution Principle — Objects should be replaceable by their subtypes.
+The Interface Segregation Principle — Interfaces should be client specific rather than general.
+The Dependency Inversion Principle — Depend on abstractions rather than concretions.
+
+Source:
+https://medium.com/@severinperez/writing-flexible-code-with-the-single-responsibility-principle-b71c4f3f883f
