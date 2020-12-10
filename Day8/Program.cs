@@ -6,7 +6,8 @@ namespace Day8
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            ExceptionCatchExample.ShowExceptionExample();
         }
     }
 }
