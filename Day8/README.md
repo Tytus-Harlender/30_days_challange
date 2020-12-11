@@ -1,4 +1,5 @@
-#Day8
+# Day 8 
+
 1.	Try-catch-finally. What is it and what is a usage of each keyword?
 2.	How to create an exeption? What kind of exceptions usage do you know (3 examples)?
 3.	What is a meaning of stackoverflow exeption?
@@ -30,4 +31,28 @@ StackOverflowException is a class that derives from Exception class described ab
 Source:
 https://www.dotnetperls.com/stackoverflowexception
 
+4.	Nullable types and it’s kinds
 
+Nullable type is enwidening of both value and reference types range. There are nullable value types (introduced since C#2.0) and nullable reference types (introduced since C#8.0). Frist one is a struct. Second one is a class and reference type is nullable by default in contrary to value types. In both cases nullable feature adds ‘null’ value/reference to the all possible range.
+For example, nullable bool type is a nullable value type. It may contain all of it’s underlying type values (true and false) and additional ‘null’ value. We declare the type interchangeably with Nullable<T> or T? (where T specifies the underlying type and it cannot be a nullable type itself ). Nullable type lets us to use its built in property ‘hasValue’ to check if the variable has value or not.
+
+Example of nullable value type is shown in ‘NullableValueClass’. We may see two different types of nullable value type declaration and usage of hasValue property in ‘if’ statement.
+
+
+When to use?
+
+In some applications or databases variable value may be undefined or missing. Following an example with Boolean type, the value in the database would have not ‘true’ nor ‘false’ state, but ‘null’ instead. So when we write a program that accesses such database we may use nullable type to take such cases into account.
+
+
+Source:
+https://www.pluralsight.com/guides/nullable-types-and-their-consumption-csharp
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types
+
+
+5.	Continue-break keywords difference
+
+Both keywords are used to modify the loops work. ‘break’ keyword jumps out of the loop when a certain condition (described by if statement is present) whereas ‘continue’ keyword simply skips one iteration of the loop (the one where the condition is present). Both may be used in ‘for’ and ‘while’ statements. ‘ContinueAndBreakClass’ shows the usage of both words in a while loop. The output of the BreakingLoop() method will be ‘123’ and OmittingIteration() method will be ‘12356789’
+
+
+Source:
+https://www.w3schools.com/cs/cs_break.asp
