@@ -6,7 +6,7 @@ namespace Day8
     class MyExceptionUsage
     {
 
-        public static void Main()
+        public static void UseMyException()
         {
             try
             {

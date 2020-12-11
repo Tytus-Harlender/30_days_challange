@@ -8,6 +8,9 @@ namespace Day8
         {
             
             ExceptionCatchExample.ShowExceptionExample();
+            MyExceptionUsage.UseMyException();
+
+
         }
     }
 }
