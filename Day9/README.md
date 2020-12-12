@@ -35,6 +35,7 @@ https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/
 -	Enum
 -	Delegate
 -	Struct
+
 In ‘NamespaceDeclarationClass’ we may see a declaration of each of the above. It is worth mentioning that we may not have two classes with the same name within one namespace, but we may have such in two different namespaces. Namespaces have public modifiers and it is not modifiable.
 To use a declared or built-in .NET namespace in our program we use ‘using’ (as using directive) keyword at the very beginning of it. It gives us ability to use object within ‘used’ namespaces. There are also two different usages of the ‘using’ keyword (using static directive and using statement)
 
@@ -44,4 +45,14 @@ Worth-seeing also:
 
 source:
 https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace
+
+3.	Enum
+
+‘Enum’ does not refer to enumeration (which is a value type) but to the enum class. It provides the base class for enumerations. This class implements IComparable IConvertible and IFormattable interfaces.
+
+4.	Singleton – definition, terms of use 
+	It is a design pattern that is used to prevent a class from creating its instance more than once.
+
+Source:
+https://cezarywalenciuk.pl/blog/programing/wzorce-projektowe-c--singleton
 
