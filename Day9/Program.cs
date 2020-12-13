@@ -6,7 +6,7 @@ namespace Day9
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            EnumerationClass.LoopThroughMonths();
         }
     }
 }
