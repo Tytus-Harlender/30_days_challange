@@ -48,7 +48,20 @@ https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/names
 
 3.	Enum
 
-‘Enum’ does not refer to enumeration (which is a value type) but to the enum class. It provides the base class for enumerations. This class implements IComparable IConvertible and IFormattable interfaces.
+‘Enum’ refers to the enum class. It provides the base class for enumerations. This class implements IComparable IConvertible and IFormattable interfaces.
+
+Enumeration type is a value type and it is a set of related constants like for example days of the week, seasons, months, colours and so on. We create such type by using enum keyword and passing the names of the set of constants. By default each name has an int type and value starting from 0 with the first name and ascending. We may assign different int values if we want. The idea of enum type is to present a set of integers with names so we may for example loop through the names by ints. The idea is  The example od enumeration is shown in EnumerationClass.
+
+In this class we create two enums. One with dedfault ints and second with defined int values. Then we create two methods that may loop through these enums. First will print in the console the names of the months. The second will print the ints assigned to the members names. In both cases we first create an array of the values from enums by Enum.GetValues() method and then loop through this array. Note that in the first case we cast the values to the Months type to have the names of the months printed instead of the numbers.
+
+When to use?
+
+Whenever a procedure accepts a limited set of variables, consider using an enumeration. Enumerations make for clearer and more readable code, particularly when meaningful names are used.
+
+Source:
+https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration
+https://stackoverflow.com/questions/3519429/what-is-main-use-of-enumeration
+
 
 4.	Singleton – definition, terms of use 
 	It is a design pattern that is used to prevent a class from creating its instance more than once.
