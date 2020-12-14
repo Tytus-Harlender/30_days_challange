@@ -34,13 +34,26 @@ Yes, it can. We can see it in AbstractClassSecond inheriting from AbstractClassF
 Q5. Can abstract class have private methods?
 Virtual and abstract methods cannot be private
 
-Abstract class                       VS                      	  interface
+Abstract class                                             	  
 
-fields	                                                         No fields
-Not all members need to be abstract	                            All members are abstract
-Need for using override keyword	                                No override keyword
-Can inherit other abstract class	                               Can implement other interface
-Only one class can be inherited	                                Several interfaces can be implemented
-Can implement interface	                                        Cannot inherit classes
-Are ‘inherited’	                                                Are ‘implemented’
-can contain virtual members                                     Cannot contain virtual members
+-fields	                                                         
+-Not all members need to be abstract	                        
+-Need for using override keyword	                          
+-Can inherit other abstract class	                              
+-Only one class can be inherited	                               
+-Can implement interface	                                        
+-Are ‘inherited’	                                                
+-can contain virtual members                                     
+
+VS
+
+interface
+
+-No fields
+-All members are abstract
+-No override keyword
+-Can implement other interface
+-Several interfaces can be implemented
+-Cannot inherit classes
+-Are ‘implemented’
+-Cannot contain virtual members
