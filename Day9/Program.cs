@@ -7,6 +7,8 @@ namespace Day9
         static void Main(string[] args)
         {
             EnumerationClass.LoopThroughMonths();
+            UsingStatementExample.ReadTheLines();
+            QueryClass.ShowMethodSyntaxExample();
         }
     }
 }
