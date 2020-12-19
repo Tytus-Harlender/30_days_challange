@@ -363,3 +363,160 @@ FROM salesman
 WHERE city IN
     (SELECT city
      FROM customer);
+
+
+!: 16,17,18,19,20
+Task21
+SELECT *
+FROM salesman a
+WHERE EXISTS
+   (SELECT *
+	FROM CUSTOMER b
+	WHERE  a.name  < b.cust_name);
+Task22 (??)
+SELECT *
+FROM Customer a
+WHERE grade> ANY
+   (SELECT grade
+	FROM Customer b
+	WHERE (b.city<'New York'));
+Task23 (ok)
+SELECT *
+FROM Orders a
+WHERE purch_amt> ANY
+   (SELECT purch_amt
+	FROM Orders b
+	WHERE (b.ord_date<'10/09/2012'));
+Task24
+SELECT *
+FROM Orders a
+WHERE purch_amt< ANY
+   (SELECT purch_amt
+	FROM Orders b, Customer c
+	WHERE (c.city='London')
+        AND b.customer_id=c.customer_id);
+Task25 (??)
+SELECT *
+FROM orders
+WHERE purch_amt < 
+   (SELECT MAX (purch_amt)
+	FROM orders a, customer b
+	WHERE  a.customer_id=b.customer_id
+	AND b.city='London');
+Task26 (ok)
+SELECT *
+FROM Customer a
+WHERE grade> ALL
+   (SELECT grade
+	FROM Customer b
+	WHERE city='New York');
+Task27
+SELECT name, city, commission
+FROM Salesman a
+WHERE city= ANY
+   (SELECT city
+    FROM Customer b);
+
+[with definition of ‘total_amt’]
+SELECT salesman.name, salesman.city, subquery1.total_amt FROM 
+salesman, (SELECT salesman_id, SUM(orders.purch_amt) AS total_amt 
+FROM orders GROUP BY salesman_id) subquery1 WHERE subquery1.salesman_id = salesman.salesman_id AND
+salesman.city IN (SELECT DISTINCT city FROM customer);
+Task28 (ok)
+SELECT *
+FROM Customer a
+WHERE grade <> ANY
+   (SELECT grade
+    FROM Customer b
+    WHERE city = 'London');
+Task29 (ok)
+SELECT *
+FROM Customer a
+WHERE grade <> ANY
+   (SELECT grade
+    FROM Customer b
+    WHERE city = 'Paris');
+Task30(ok)
+
+SELECT *
+FROM Customer a
+WHERE grade NOT IN
+   (SELECT grade
+    FROM Customer b
+    WHERE city = 'Dallas');
+Task31
+SELECT AVG(pro_price) AS "Average Price", 
+   company_mast.com_name As "Company"
+   FROM item_mast, company_mast
+        WHERE item_mast.pro_com= company_mast.com_id
+           GROUP BY company_mast.com_name;
+Task32
+SELECT AVG(pro_price) AS "Average Price", 
+   item_mast.pro_name As "Product"
+   FROM item_mast
+           GROUP BY pro_name;s
+Task33
+SELECT P.pro_name AS "Product Name", 
+       P.pro_price AS "Price", 
+       C.com_name AS "Company"
+   FROM item_mast P, company_mast C
+   WHERE P.pro_com = C.com_id
+     AND P.pro_price =
+     (
+       SELECT MAX(P.pro_price)
+         FROM item_mast P
+         WHERE P.pro_com = C.com_id
+     );
+Task34 (ok)
+SELECT *
+   FROM emp_details
+   WHERE emp_lname = 'Gabriel' 
+UNION
+SELECT *
+   FROM emp_details
+   WHERE emp_lname = 'Dosio'
+[alternative:]
+SELECT * 
+  FROM emp_details
+   WHERE emp_lname IN ('Gabriel' , 'Dosio');
+Task35 (ok)
+SELECT *
+   FROM emp_details
+   WHERE emp_dept IN (89,63)
+Task36 (ok)
+SELECT emp_fname, emp_lname
+   FROM emp_details
+   WHERE emp_dept IN
+ (SELECT dpt_code
+FROM emp_department
+WHERE dpt_allotment>50000)
+Task37 
+SELECT *
+   FROM emp_department
+   WHERE dpt_allotment >
+ (SELECT avg(dpt_allotment)
+FROM emp_department)
+Task38
+SELECT dpt_name FROM emp_department
+  WHERE dpt_code IN
+  (
+    SELECT emp_dept
+      FROM emp_details
+      GROUP BY emp_dept
+      HAVING COUNT(*) >2
+  );
+Task39
+SELECT emp_fname, emp_lname 
+FROM emp_details 
+WHERE emp_dept IN (
+  SELECT dpt_code
+  FROM emp_department 
+  WHERE dpt_allotment= (
+    SELECT MIN(dpt_allotment)
+    FROM emp_department 
+    WHERE dpt_allotment >
+ (SELECT MIN(dpt_allotment) 
+      FROM emp_department )));
+
+
+
