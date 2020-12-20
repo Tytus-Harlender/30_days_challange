@@ -518,5 +518,62 @@ WHERE emp_dept IN (
  (SELECT MIN(dpt_allotment) 
       FROM emp_department )));
 
+SQL UNION
+
+Task1 (ok)
+SELECT salesman_id, name,
+FROM salesman
+WHERE city = 'London'
+UNION
+(SELECT customer_id, cust_name,
+FROM customer
+WHERE city = 'London')
+Task2 (ok)
+SELECT salesman_id, city
+FROM customer
+UNION
+(SELECT salesman_id, city
+FROM salesman)
+Task3 (ok)
+SELECT salesman_id, customer_id
+FROM customer
+UNION 
+(SELECT salesman_id, customer_id
+FROM orders)
+
+
+SQL VIEW
+
+Task1
+CREATE VIEW newyorkstaff
+AS SELECT *
+FROM salesman
+WHERE city = 'New York';
+
+Task2 (ok)
+CREATE VIEW salesown
+ AS SELECT salesman_id, name, city
+ FROM salesman;
+
+Task3
+CREATE VIEW newyorkstaff
+AS SELECT *
+FROM salesman
+WHERE city = 'New York';
+
+SELECT *
+FROM newyorkstaff
+WHERE commission > .13;
+Task4
+CREATE VIEW gradecount (grade, number)
+AS SELECT grade, COUNT(*)
+FROM customer
+GROUP BY grade;
+Task5
+CREATE VIEW totalforday
+ AS SELECT ord_date, COUNT(DISTINCT customer_id),
+ AVG(purch_amt), SUM(purch_amt)
+ FROM orders
+ GROUP BY ord_date;
 
 
