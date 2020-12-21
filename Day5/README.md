@@ -4,7 +4,10 @@ Comparison of struct and a class – ‘sealed’ keyword -  difference between 
 
 1.	Struct vs class
 
-Struct is a storage of data in it’s type, which is a value type (in contrary to class which is a reference type). They are then often located on a stack. Structs have a default public members. We may see usage of a struct in StructExample class. We first define the struct and later assign values to it’s members, which will be further displayed. Note that all members are public and that we do not use new keyword for initializing the struct. In .NET there are already some built-in structs which don’t need to be defined as DateTime.
+The main difference is that struct is a value type and class is a reference type. The place of data storage is then different (stack vs heap) and therefore an access to is’s data may be sometimes faster for the structs. Another consequence is that structs as value types must contain a value (nullable type extension for values does not apply here). Class can be null type. Moreover, when you copy a struct and alter the copy it does not affect the original. In contrary, a copy of a class modification always influences the second one as it is the same data location (what is copied is just a pointer).
+
+
+Structs have a default public members. We may see usage of a struct in StructExample class. We first define the struct and later assign values to it’s members, which will be further displayed. Note that all members are public and that we do not use new keyword for initializing the struct. In .NET there are already some built-in structs which don’t need to be defined as DateTime.
 
 
 
@@ -14,6 +17,7 @@ https://stackoverflow.com/questions/54585/when-should-you-use-a-class-vs-a-struc
 https://www.dotnetperls.com/struct
 https://stackoverflow.com/questions/13049/whats-the-difference-between-struct-and-class-in-net
 https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct
+
 
 
 
