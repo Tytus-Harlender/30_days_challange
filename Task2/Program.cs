@@ -5,8 +5,8 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            CSVReaderAndListCreator newList = new CSVReaderAndListCreator("C:\\Users\\Tytus\\Desktop\\TASKs\\biostats.csv");
-            ListSearcherAndPrinterByQuery.SearchTheList(listOfPersons);
+            ListSearcherAndPrinterByQuery.SearchTheList(CSVReaderAndListCreator.ReadCSVFileAndCreateAList("C:\\Users\\Tytus\\Desktop\\TASKs\\biostats.csv"));
+        
         }
     }
 }

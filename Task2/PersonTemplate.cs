@@ -29,11 +29,11 @@ namespace Task2
         public PersonTemplate(string name, string sex, string age, string height, string weight)
         {
             Name = name;
-            if (sex == "F")
+            if (sex.Contains("F"))
             {
                 Sex = (int)_sexEnum.Female;
             }
-            else if (sex == "M")
+            else if (sex.Contains("M"))
             {
                 Sex = (int)_sexEnum.Male;
             }              
