@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.IO;
 
 namespace Task1
@@ -7,14 +8,15 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-
-            StringArrayToIntArrayConverter newConverter = new StringArrayToIntArrayConverter(TextFileSizer.GetTheLines());
+            var textFileSizer = new TextFileSizer();
+            string fileWithNubmer = @"fileTest.txt";
+            var lines = textFileSizer.GetTheLines(fileWithNubmer);
+            StringArrayToIntArrayConverter newConverter = new StringArrayToIntArrayConverter(lines);
 
             TextLinesCollectionCreator newCreator = new TextLinesCollectionCreator(newConverter.IntArray);
 
-            ListSortingClass.SortTheList(newCreator.ListOfInts);
-
-            //File.WriteAllLines(@"C:\Users\Tytus\Desktop\fileTest2.txt", newCreator.ListOfInts);
+            //ListSortingClass.SortTheList(newCreator.ListOfInts);
+            //File.WriteAllLines("fileTest2.txt", newCreator.ListOfInts);
         }
     }
 }

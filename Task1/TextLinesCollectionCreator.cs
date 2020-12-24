@@ -14,13 +14,10 @@ namespace Task1
 
             foreach (int i in newList)
             {
-
                 newList.Add(inputnumbers[i]);
-
             }
 
             ListOfInts = newList;
-
         }
     }
 }

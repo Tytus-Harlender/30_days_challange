@@ -2,16 +2,12 @@
 
 namespace Task1
 {
-    public static class TextFileSizer
+    public class TextFileSizer
     {
-        public static string[] GetTheLines()
+        public string[] GetTheLines(string path)
         {
-            string path = @"C:\Users\Tytus\Desktop\fileTest.txt";
             string[] inputLines = File.ReadAllLines(path);
             return inputLines;
-
         }
-        
-    
     }
 }
