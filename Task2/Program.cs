@@ -5,8 +5,12 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            ListSearcherAndPrinterByQuery.SearchTheList(CSVReaderAndListCreator.ReadCSVFileAndCreateAList("C:\\Users\\Tytus\\Desktop\\TASKs\\biostats.csv"));
-        
+            string path = @"C:\Users\Tytus\Desktop\TASKs\biostats.csv";
+            ListCreator nl = new ListCreator();
+            CSVFileReader fr = new CSVFileReader();
+            var listToSort = fr.ReadCSVFile(path,nl.CreateList());
+            ListSearcher ls = new ListSearcher();
+            ls.SearchTheList(listToSort);
         }
     }
 }

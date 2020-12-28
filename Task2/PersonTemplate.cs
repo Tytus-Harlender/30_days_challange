@@ -5,42 +5,36 @@ namespace Task2
     public class PersonTemplate
     {
         #region FIELDS
-        private string _name;
-        private int _sexValue;
         private enum _sexEnum
         {
-            Male = 0,
-            Female = 1
+            Male,
+            Female
+        
         }
-        private int _age;
-        private int _height;
-        private double _weight;
         #endregion
 
         #region PROPERTIES
-        public string Name { get => _name; set => _name = value; }
-        public int Sex { get => _sexValue; set => _sexValue = value; }
-        public int Age { get => _age; set => _age = value; }
-        public int Height { get => _height; set => _height = value; }
-        public double Weight { get => _weight; set => _weight = value; }
+        public string Name { get ; set; }
+        public int Sex { get; set; }
+        public int Age { get; set; }
+        public int Height { get; set; }
+        public double Weight { get; set; }
 
         #endregion
-
-        public PersonTemplate(string name, string sex, string age, string height, string weight)
+        public PersonTemplate(string[] values)
         {
-            Name = name;
-            if (sex.Contains("F"))
+            Name = values[0];
+            if (values[1].Contains("F"))
             {
                 Sex = (int)_sexEnum.Female;
             }
-            else if (sex.Contains("M"))
+            else if (values[1].Contains("M"))
             {
                 Sex = (int)_sexEnum.Male;
-            }              
-            Age = Int32.Parse(age);
-            Height = Int32.Parse(height);
-            Weight = Double.Parse(weight);
-
+            }
+            Age = Int32.Parse(values[2]);
+            Height = Int32.Parse(values[3]);
+            Weight = Double.Parse(values[4]);
         }
     }
 }
