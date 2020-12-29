@@ -2,7 +2,7 @@
 
 namespace Task1
 {
-    public class TextFileSizer
+    public class TextLinesGetter
     {
         public string[] GetTheLines(string path)
         {

@@ -1,22 +1,19 @@
 ﻿
-using System;
-using System.IO;
-
 namespace Task1
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            var textFileSizer = new TextFileSizer();
-            string fileWithNubmer = @"fileTest.txt";
-            var lines = textFileSizer.GetTheLines(fileWithNubmer);
-            StringArrayToIntArrayConverter newConverter = new StringArrayToIntArrayConverter(lines);
-
-            TextLinesCollectionCreator newCreator = new TextLinesCollectionCreator(newConverter.IntArray);
-
-            //ListSortingClass.SortTheList(newCreator.ListOfInts);
-            //File.WriteAllLines("fileTest2.txt", newCreator.ListOfInts);
+        {            
+            string sp = @"fileTest.txt";
+            string op = @"output.txt";
+            var ng = new TextLinesGetter();
+            var lines = ng.GetTheLines(sp);
+            var sic = new StringToIntConverter();
+            var numbers = sic.ConvertStringToInt(lines);
+            var lc = new ListCreator(numbers);
+            lc.MyList.Sort();
+            var tw = new TextLinesWriter(lc.MyList,op);
         }
     }
 }
