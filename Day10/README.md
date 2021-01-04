@@ -43,6 +43,12 @@ We distinguish 5 following normal forms (NF) each describes how to get rid of so
 •	4NF (rare)
 •	5NF(rare)
 
+3. Indexing in DB
+
+Index in database is a way to search through the data more efficiently by reducing the time needed for retrieving information. The idea is based on dividing the dataset into smaller groups following some common features. We use ‘keys’ to group the data (recall Dictionary<Key,T> collection ). Then each group is again divided and so we proceed in creating smaller and smaller parts of data. By doing so we create a hierarchy which is easier searched as we may move directly to the needed node in the structure.
+The most common structure to use is B+ Tree. It has equal and even distribution of data. Moreover, the number of lookups is directly related to the height of the tree, so it is crucial to ensure all the branches are of equal height.  This spreads out the data across the entire tree, making it more efficient to look up data within any range.
+
+
 Source:
 https://www.w3schools.in/dbms/database-normalization/
 https://stackoverflow.com/questions/246701/what-is-normalisation-or-normalization
