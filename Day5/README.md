@@ -9,8 +9,11 @@ The main difference is that struct is a value type and class is a reference type
 
 Structs have a default public members. We may see usage of a struct in StructExample class. We first define the struct and later assign values to it’s members, which will be further displayed. Note that all members are public and that we do not use new keyword for initializing the struct. In .NET there are already some built-in structs which don’t need to be defined as DateTime.
 
-
-
+Main differences:
+-structs are value types and classes are reference types
+(the rest are a consequance of the above)
+- structs do not support inheritance, but classes do
+- structs cannot have default constructors
 
 Source:
 https://stackoverflow.com/questions/54585/when-should-you-use-a-class-vs-a-struct-in-c
