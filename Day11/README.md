@@ -44,6 +44,15 @@ Source:
 https://www.journaldev.com/16774/sql-data-types
 
 4.	‘auto_increment’
+
+  The idea behind auto_increment feature in relational databases comes down to improve the queries realisation speed on the DB as well as not to mess with IDs of DB elements when adding several objects especially simultaniously. By default the starting value for incrementation is 1 and it iterates with adding 1 each step. After using AUTO_INCREMENT statement in syntax (accurate to MySQL DB) there is no need to define ID value. In other words, to insert a new record into the table, we will NOT have to specify a value for the "id" column (a unique value will be added automatically). It helps a lot with adding new records. The MS SQL Server uses the IDENTITY keyword to perform an auto-increment feature. 
+  
+source: 
+https://www.w3schools.com/sql/sql_autoincrement.asp
+https://chartio.com/resources/tutorials/how-to-define-an-auto-increment-primary-key-in-sql-server/ 
+
+
+
 5.	SQL procedure store
 6.	Query realization improvement
 
