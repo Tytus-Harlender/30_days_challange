@@ -54,6 +54,20 @@ https://chartio.com/resources/tutorials/how-to-define-an-auto-increment-primary-
 
 
 5.	SQL procedure store
+
+Stored procedure is a saved piece of code, that can be latter reused. It helps you not to rewrite and rewrite the same piece of code all over again. You may also declare the input parameters you need, so that the stored procedure can act based on the parameter value(s) that is passed. The syntax for stored procedure declaration is as follows:
+
+CREATE PROCEDURE procedure_name
+AS
+sql_statement
+GO; 
+
+To execute the created procedure use the following syntax:
+EXEC procedure_name; 
+
+source:https://www.w3schools.com/sql/sql_stored_procedures.asp
+
+
 6.	Query realization improvement
 
 
