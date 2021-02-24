@@ -57,8 +57,8 @@ The difference between them is as follows:
 |Storage Size	       |  Actual Length (in bytes)	                                  |  2 times Actual Length (in bytes)|
 
 |Usage	             |  Used when data length is variable or variable length
-                        columns and if actual data is always way less than capacity |	Due to storage only, used only if you need Unicode support |
-                                                                                      such as the Japanese Kanji or Korean Hangul characters.
+                        columns and if actual data is always way less than capacity |	Due to storage only, used only if you need Unicode support 
+                                                                                      such as the Japanese Kanji or Korean Hangul characters. |
 
 Source:
 https://www.sqlservertutorial.net/sql-server-basics/sql-server-nvarchar/
