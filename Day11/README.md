@@ -45,14 +45,19 @@ Some datatypes may both share specific functions and differ at the same time. Fo
 The difference between them is as follows:
 
 
-                    |                          VARCHAR                             |                      NVARCHAR
+|                    |                          VARCHAR                             |                      NVARCHAR                                                                  |
+|------------------- | ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------|
 
-Character Data Type |	 Variable-length, non-Unicode characters	                   |  Variable-length, both Unicode and non-Unicode characters such as Japanese, Korean, and Chinese.
-Maximum Length	    |  Up to 8,000 characters	                                     |  Up to 4,000 characters
-Character Size	    |  Takes up 1 byte per character	                             |  Takes up 2 bytes per Unicode/Non-Unicode character
-Storage Size	      |  Actual Length (in bytes)	                                   |  2 times Actual Length (in bytes)
-Usage	              |  Used when data length is variable or variable length
-                       columns and if actual data is always way less than capacity |	Due to storage only, used only if you need Unicode support 
+|Character Data Type |	 Variable-length, non-Unicode characters	                  |  Variable-length, both Unicode and non-Unicode characters such as Japanese, Korean, and Chinese|
+
+|Maximum Length	     |  Up to 8,000 characters	                                    |  Up to 4,000 characters |
+
+|Character Size	     |  Takes up 1 byte per character	                              |  Takes up 2 bytes per Unicode/Non-Unicode character|
+
+|Storage Size	       |  Actual Length (in bytes)	                                  |  2 times Actual Length (in bytes)|
+
+|Usage	             |  Used when data length is variable or variable length
+                        columns and if actual data is always way less than capacity |	Due to storage only, used only if you need Unicode support |
                                                                                       such as the Japanese Kanji or Korean Hangul characters.
 
 Source:
