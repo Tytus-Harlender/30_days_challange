@@ -15,6 +15,8 @@ NOTE: There is a difference in how the subclasses derivate from abstract classes
 
 When to use abstract classes and interfaces?
 
+Abstract class is always used as an base class. It supports abstract or virtual features, which the inherited classes should implement. Abstract class can declare fields. It is not possible to create an object of an abstract class. Interface may declare only properties, methods and events (without access modificators). We should always implement all declared fields and methods.  
+
 First of all, for security of data and information that should be hidden before user. Secondly, multi-implementation lets us implement several interfaces to single class at once
 
 Q1.Is there a method we cannot 'override'?
