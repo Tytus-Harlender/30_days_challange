@@ -2,7 +2,7 @@
 
 namespace Task1
 {
-    public class StringToIntConverter
+    public class StringToIntConverter : IConvertStringToInt
     {
         public int[] ConvertStringToInt(string[] arrayToConvert)
         {

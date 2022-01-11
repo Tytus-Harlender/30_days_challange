@@ -5,7 +5,7 @@ namespace Task1
 {
     public class TextLinesWriter
     {
-        public TextLinesWriter(List<int> inputList, string outputPath)
+        public void SaveToFile(List<int> inputList, string outputPath)
         {
             var isc = new IntToStringListConverter();
             var stringList = isc.ConvertIntToStringList(inputList);

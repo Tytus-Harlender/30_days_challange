@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Unity" Version="5.11.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="fileTest.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
