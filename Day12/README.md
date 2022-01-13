@@ -26,5 +26,18 @@ source:
 https://social.msdn.microsoft.com/Forums/sqlserver/en-US/7b24548c-953e-4aeb-bf9e-3d7a22015ed6/what-exactly-is-a-c-helper-method?forum=smallbasic
 
 2. Generics
+  
+  The generics are the concept of declaring a class without specific declaration of the data type (T) it will use. The scope of the possible types to be used in such class is treated generally (hence the name) not specificaly. In other words, "generic" means the general form, not specific. It may be better understood on the given example in the class "DataStorage". We can see '<T>' standing directly after the name of the class, meaning this specific class is generic. We specify the type during creating an instance of the class.
+  This may be seen within "GenericsPresentation" class. We declare that this created instance will contain string data type. If we then try to assign a value of a different type we will find ourselves in a compilation error.
+  
+  Very well then, but are we obliged to use only one generic type within the class? No. Moreover, we do not have to name it with single capital letter 'T'.
+"KeyValuePair" class represents this case. The idea behind it is the same as in "DataStorage" class, omitting one single difference - we have to 'slots' for type declaration - TKey and TValue (note that we now have picked custom names instead of simply passing 'T' letter again).
+  
+  In both above generic classes the type is a type of a specified property - Data (in "DataStorage") and both Key and Value (in "KeyValuePair") respectively.
+  
+  t.b.c.
+  
+  sources: https://www.tutorialsteacher.com/csharp/csharp-generics
+          https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics
 3. Threads
 4. Asynchronous communication
