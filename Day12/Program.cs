@@ -11,6 +11,8 @@ namespace Day12
             var firstLetter_0 = word.firstLetter();
             Console.WriteLine(firstLetter_0);
             Console.WriteLine(firstLetter_1);
+            
+            
 
         }
     }
