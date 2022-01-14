@@ -35,9 +35,31 @@ https://social.msdn.microsoft.com/Forums/sqlserver/en-US/7b24548c-953e-4aeb-bf9e
   
   In both above generic classes the type is a type of a specified property - Data (in "DataStorage") and both Key and Value (in "KeyValuePair") respectively.
   
-  t.b.c.
+In "DataStorageWithArray" class we may see an example of generic methods and generic fields. The private field is an array of some data without yet specified type. We may also see GetData() and AddOrUpdate() methods. Both of them generic methods - a generic method is simply a method that has no specified type as either input or output parameter. The type of data stored is yet to be declared after initialistion in 'GenericsPresentation' class.
+  
+  
+ Generic method does not need to be defined within generic class. 'NotGenericPrinter'class shows the usage of it. Generic method 'Print<T>()' has '<T>' generic keyword showing it is a generic method within a non generic class. It will print data of a given type.
+  
+  Generic features (it broadens and generalises the usability of a class, it derives regardless to abstract, generic or non generic keywords):
+  
+    >Increases the reusability. The more type parameters mean more reusable it becomes. However, too much generalization makes code difficult to understand and maintain.
+    >can be a base class to other generic or non-generic classes or abstract classes.
+    >can be derived from other generic or non-generic interfaces, classes, or abstract classes.
+  
+  Prons (removes boxing and unboxing, reusability, type-safety):
+  
+    +Generics increase the reusability of the code. You don't need to write code to handle different data types.
+    +Generics are type-safe. You get compile-time errors if you try to use a different data type than the one specified in the definition.
+    +Generic has a performance advantage because it removes the possibilities of boxing and unboxing.
+
+  WHen to use? (mainly - Collections, IEnumerable imlementation, Lists, Arrays..)
+  
+  !The most common use of generics is to create collection classes.(the generic collections should be used whenever possible instead of classes such as ArrayList use System.Collections.Generic namespace instead of the System.Collections namespace.)
+  !Generic classes may be constrained to enable access to methods on particular data types.
+  (Information on the types that are used in a generic data type may be obtained at run-time by using reflection.)
   
   sources: https://www.tutorialsteacher.com/csharp/csharp-generics
           https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics
+  
 3. Threads
 4. Asynchronous communication
