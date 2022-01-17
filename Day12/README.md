@@ -1,4 +1,4 @@
-#Day 12 helper method - extension method - generics - Threads - Asynchronous communication
+#Day 12 helper method - extension method - generics - delegates
 
 
 1. Helper methods 
@@ -61,5 +61,5 @@ In "DataStorageWithArray" class we may see an example of generic methods and gen
   sources: https://www.tutorialsteacher.com/csharp/csharp-generics
           https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics
   
-3. Threads
-4. Asynchronous communication
+  
+3. Delegates
