@@ -14,6 +14,9 @@ namespace Day12
 
             GenericsPresentation presentation = new GenericsPresentation();
 
+            //delegates
+            BasicDelegatePresentationBDP bdp1 = new BasicDelegatePresentationBDP();
+            bdp1.PresentTheDelegates();
         }
     }
 }
