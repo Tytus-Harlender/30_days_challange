@@ -63,3 +63,30 @@ In "DataStorageWithArray" class we may see an example of generic methods and gen
   
   
 3. Delegates
+
+Delegates stand for the idea to pass the function as a parameter (for example in callback functions or event handlers). The delegates are of the reference type. 
+Creating a delegate consists of three steps:
+
+-Declareing a delegate
+-Setting a target method
+-Invoking a delegate
+
+The presentation of the above has been included in 'BasicDelegatePresentationBDP' class.
+First we declare the delegate outside of the class.
+Then we set the target method (here we have set two methods - A and B - one after another for better example).
+After each setting we invoke the delegate with the proper string data.
+Delegate may be passed as a parameter (therefore we provide passing a method - A or B - as a parameter). THe exmaple is shown in method 'InvokeDelegate()'.
+
+Please note: 
+- we rather declare delegate outside of the class
+- In .NET, Func and Action types are built-in generic delegates that should be used for most common delegates instead of creating new custom delegates. 
+
+
+t.b.c.
+multicast
+generic delegate
+  
+sources:
+  https://www.tutorialsteacher.com/csharp/csharp-delegates
+  https://www.geeksforgeeks.org/c-sharp-delegates/
+  https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/
