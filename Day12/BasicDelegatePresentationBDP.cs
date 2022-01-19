@@ -13,8 +13,11 @@ namespace Day12
 
             del = BDPClassB.MethodB;
             del("this one goes for MethodB");
+        }
 
-           
+        public void InvokeDelegate(MyDelegate del)
+        {
+            del("it was called");
         }
     }
 }
