@@ -82,8 +82,13 @@ Please note:
 - In .NET, Func and Action types are built-in generic delegates that should be used for most common delegates instead of creating new custom delegates. 
 
 
+Delegate multicasting
+
+If a delegate combines several methods we call it a multicasting delegate. Combining may be performed by using -,+,-=,+= operators as shown in PresentTheDelegates() method.
+Note that if a delegate returns a value, then the last assigned target method's value will be return when a multicast delegate called.
+
 t.b.c.
-multicast
+
 generic delegate
   
 sources:
