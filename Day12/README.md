@@ -25,7 +25,7 @@ Through LINQ's use of extension methods, you can use methods that work on List<T
 source: 
 https://social.msdn.microsoft.com/Forums/sqlserver/en-US/7b24548c-953e-4aeb-bf9e-3d7a22015ed6/what-exactly-is-a-c-helper-method?forum=smallbasic
 
-2. Generics
+3. Generics
   
   The generics are the concept of declaring a class without specific declaration of the data type (T) it will use. The scope of the possible types to be used in such class is treated generally (hence the name) not specificaly. In other words, "generic" means the general form, not specific. It may be better understood on the given example in the class "DataStorage". We can see '<T>' standing directly after the name of the class, meaning this specific class is generic. We specify the type during creating an instance of the class.
   This may be seen within "GenericsPresentation" class. We declare that this created instance will contain string data type. If we then try to assign a value of a different type we will find ourselves in a compilation error.
@@ -62,7 +62,7 @@ In "DataStorageWithArray" class we may see an example of generic methods and gen
           https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics
   
   
-3. Delegates
+4. Delegates
 
 Delegates stand for the idea to pass the function as a parameter (for example in callback functions or event handlers). The delegates are of the reference type. 
 Creating a delegate consists of three steps:
@@ -87,9 +87,24 @@ Delegate multicasting
 If a delegate combines several methods we call it a multicasting delegate. Combining may be performed by using -,+,-=,+= operators as shown in PresentTheDelegates() method.
 Note that if a delegate returns a value, then the last assigned target method's value will be return when a multicast delegate called.
 
-t.b.c.
+Generic delegates
 
-generic delegate
+The generic type must be specified when you set a target method. In 'GenericDelegatePresentation' class we may see three methods presenting this case.
+Out of the class we may see the delegate declaration including general data type <T>. Note that it has a return value declared as T.
+Both 'Sum' and 'Concat' methods merge data. The difference is in data type that is to be merged. It is INT and STRING for 'Sum' and 'Concat' methods respectively.
+In PresentGenericDelegate() we may see setting a target method of the delegate twice: for INT and for STRING data type.
+
+
+
+Important features 
+ ! is the reference type data type.
+ ! A target method's signature must match with delegate signature.
+ ! used to declare an event and anonymous methods in C#.
+
+ When to use delegates:
++ Every once in a while you might feel the need to send a method as a parameter to another method, and that's when you'll need delegates. 
++ callback functions
++ event handlers
   
 sources:
   https://www.tutorialsteacher.com/csharp/csharp-delegates
