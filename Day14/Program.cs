@@ -33,6 +33,16 @@ namespace Day14
             {
                 Console.WriteLine($"Worker thread: {i}");
                 Thread.Sleep(1000);
+
+
+                //returns the current thread that is executing the code
+                Thread currentThread = Thread.CurrentThread;
+                Console.WriteLine("Thread Id {0}: ", currentThread.ManagedThreadId);
+                Console.WriteLine("Is thread background: {0}", currentThread.IsBackground);
+                Console.WriteLine("Priority: {0}", currentThread.Priority);
+                Console.WriteLine("Culture: {0}", currentThread.CurrentCulture.Name);
+                Console.WriteLine("UI Culture: {0}", currentThread.CurrentUICulture.Name);
+                Console.WriteLine();
             }
         }
     }
