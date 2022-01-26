@@ -9,7 +9,7 @@ namespace Day14
         {
             // Create a secondary thread by passing a ThreadStart delegate  
             Thread workerThread = new Thread(new ThreadStart(Printer.Print));
-            // Start secondary thread  
+            // Start secondary thread 
             workerThread.Start();
             
             // Main thread : Print 1 to 10 every 0.2 second.   
@@ -20,6 +20,19 @@ namespace Day14
                 Console.WriteLine($"Main thread: {i}");
                 Thread.Sleep(200);
             }
+
+
+            // Create a thread with a ParemeterizedThreadStart  
+            Printer p = new Printer();
+            Thread printerThread = new Thread(p.PrintJob);
+            // Start thread with a parameter  
+            printerThread.Start("Some data");
+
+
+            // Pass a class object to a worker thread  
+            Person stanislaw = new Person("Stanislaw Nugal", "Male",80 );
+            Thread workerThread2 = new Thread(p.PrintPerson);
+            workerThread2.Start(stanislaw);
 
             //returns the current thread that is executing the code
             Thread currentThread = Thread.CurrentThread;
