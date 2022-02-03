@@ -7,11 +7,9 @@ namespace Day14
     {
         public static void Print()
         {
-
-            /// <summary>  
+            
             ///  This code is executed by a secondary thread  
-            /// </summary>
-            /// 
+            
             for (int i = 11; i < 20; i++)
             {
                 Console.WriteLine($"Worker thread: {i}");
@@ -21,6 +19,8 @@ namespace Day14
 
         public void PrintJob(object data)
         {
+            ///  This code is executed by a third thread
+
             Console.WriteLine("Background PrintJob started.");
             Thread.Sleep(1000);
             Console.WriteLine("PrintJob still printing...");
@@ -31,6 +31,8 @@ namespace Day14
 
         public void PrintPerson(object data)
         {
+            ///  This code is executed by a fourth thread
+
             Console.WriteLine("Background PrintPerson started.");
             Thread.Sleep(1000);
             Console.WriteLine("PrintPerson still printing...");
